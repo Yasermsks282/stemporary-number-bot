@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const axios = require('axios');
 
-const TOKEN = '6751268476:AAGWYevpAq0ILKWdFxHtgU6-TeCH_4xC6d0';
+const TOKEN = '8121608942:AAE2pmnJnPNw2KNhiDYnie78EfMfNRWujj8';
 const bot = new TelegramBot(TOKEN, { polling: true });
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -57,7 +57,7 @@ bot.on('callback_query', async (query) => {
   }
 });
 
-// تشغيل خادم Express (لاستخدامه في Webhook إن أردت)
+// تشغيل خادم Express
 app.get("/", (req, res) => {
   res.send("🤖 البوت يعمل!");
 });
